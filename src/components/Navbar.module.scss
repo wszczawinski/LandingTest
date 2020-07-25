@@ -1,0 +1,36 @@
+.navbar {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2vh;
+
+  .logo {
+    font-family: monospace;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: gray;
+    border: 3px solid gray;
+    padding: 5px 15px;
+  }
+
+  .list {
+    display: flex;
+    align-items: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+
+    li {
+      padding: 0 1vw;
+      display: block;
+      height: auto;
+    }
+
+    li:nth-child(3) {
+      border-right: 1px solid black;
+    }
+  }
+}
