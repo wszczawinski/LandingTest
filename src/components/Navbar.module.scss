@@ -1,71 +1,90 @@
 @import '../const.scss';
 
 .navbar {
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding-top: 2vh;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 0;
   position: fixed;
   top: 0;
+  color: white;
+  z-index: 100;
 
-  .navbarLogo {
-    font-family: 'Montserrat';
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-decoration: none;
-    color: gray;
-    border: 4px solid gray;
-    padding: 8px 18px;
-    opacity: 0.8;
-  }
-
-  .navbarList {
-    color: white;
+  .navbarContainer {
+    width: 80%;
     display: flex;
-    align-items: flex-start;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: auto;
+    justify-content: space-between;
 
-    li {
-      padding: 0 1vw;
-      display: block;
-      height: auto;
-    }
-
-    li:nth-child(3) {
-      border-right: 1px solid white;
-    }
-  }
-
-  @media (max-width: $desktop-small) {
-    .navbarList {
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: $tablet) {
-    width: 95%;
-    flex-direction: column;
-    align-items: center;
     .navbarLogo {
-      margin-bottom: 20px;
+      font-family: 'Montserrat';
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      text-decoration: none;
+      color: gray;
+      border: 4px solid gray;
+      padding: 8px 18px;
+      opacity: 0.8;
     }
+
     .navbarList {
-      li {
-        padding: 0 2vw;
-      }
-    }
-  }
-  @media (max-width: $mobile) {
-    .navbarList {
-      font-size: 0.7rem;
+      display: flex;
+      align-items: flex-start;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      height: auto;
 
       li {
-        padding: 0 2.3vw;
+        padding: 0 1vw;
+        display: block;
+        height: auto;
+        cursor: pointer;
+      }
+
+      li:hover {
+        opacity: 0.7;
+      }
+
+      li:nth-child(3) {
+        border-right: 1px solid white;
+      }
+    }
+
+    @media (max-width: $desktop-small) {
+      .navbarList {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 95%;
+      flex-direction: column;
+      align-items: center;
+      .navbarLogo {
+        margin-bottom: 20px;
+      }
+      .navbarList {
+        li {
+          padding: 0 2vw;
+        }
+      }
+    }
+    @media (max-width: $mobile) {
+      .navbarList {
+        font-size: 0.7rem;
+
+        li {
+          padding: 0 2.3vw;
+        }
       }
     }
   }
+}
+
+.transparent {
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  color: rgb(66, 66, 66);
+  transition: all 0.5 ease-in-out;
 }
