@@ -5,10 +5,10 @@ import styles from './Navbar.module.scss';
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <Link to="/" className={styles.logo}>
+      <Link to="/" className={styles.navbarLogo}>
         Logo
       </Link>
-      <ul className={styles.list}>
+      <ul className={styles.navbarList}>
         <li>Start</li>
         <li>Jak to działa?</li>
         <li>Cennik</li>

@@ -1,3 +1,5 @@
+@import '../const.scss';
+
 .navbar {
   width: 80%;
   display: flex;
@@ -6,18 +8,19 @@
   position: fixed;
   top: 0;
 
-  .logo {
-    font-family: monospace;
-    font-size: 2rem;
+  .navbarLogo {
+    font-family: 'Montserrat';
+    font-size: 2.2rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     text-decoration: none;
     color: gray;
-    border: 3px solid gray;
-    padding: 5px 15px;
+    border: 4px solid gray;
+    padding: 8px 18px;
+    opacity: 0.8;
   }
 
-  .list {
+  .navbarList {
     color: white;
     display: flex;
     align-items: flex-start;
@@ -34,6 +37,35 @@
 
     li:nth-child(3) {
       border-right: 1px solid white;
+    }
+  }
+
+  @media (max-width: $desktop-small) {
+    .navbarList {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    .navbarLogo {
+      margin-bottom: 20px;
+    }
+    .navbarList {
+      li {
+        padding: 0 2vw;
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    .navbarList {
+      font-size: 0.7rem;
+
+      li {
+        padding: 0 2.3vw;
+      }
     }
   }
 }
