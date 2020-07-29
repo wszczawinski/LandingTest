@@ -5,13 +5,18 @@ import arrowOne from '../img/arrow1.png';
 import arrowTwo from '../img/arrow2.png';
 
 export default function Description() {
+  let scroll = () => {
+    let scrollDistance = document.documentElement.clientHeight * 0.9;
+    window.scrollBy(0, scrollDistance);
+  };
+
   return (
     <section className={styles.description}>
-      <button className={styles.descriptionArrowsBtn}>
+      <button onClick={() => scroll()} className={styles.descriptionArrowsBtn}>
         <span></span>
         <span></span>
       </button>
-      <h2>Jak to działa?</h2>
+      <h2 className={styles.descriptionTitle}>Jak to działa?</h2>
       <section className={styles.descriptionContainer}>
         {/* 1 */}
         <article className={styles.descriptionItem}>
@@ -20,7 +25,10 @@ export default function Description() {
             src={PhoneBig}
             alt="phone-big"
           />
-          <div className={styles.firstParagraph}>
+          <div className={` ${styles.itemText} ${styles.firstParagraph}`}>
+            <p className={styles.itemTextTitle}>
+              1 Lorem ipsum <br /> dolor sit amet.
+            </p>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
               amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
@@ -30,11 +38,20 @@ export default function Description() {
         {/* 2 */}
         <article className={styles.descriptionItem}>
           <div>
-            <img className={`${styles.arrow}`} src={arrowOne} alt="arrow-one" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
-              amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
-            </p>
+            <img
+              className={`${styles.itemArrow} ${styles.secondArrow}`}
+              src={arrowOne}
+              alt="arrow-one"
+            />
+            <div className={` ${styles.itemText}`}>
+              <p className={styles.itemTextTitle}>
+                2 Lorem ipsum <br /> dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
+                amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
+              </p>
+            </div>
           </div>
           <img
             className={`${styles.itemImage} ${styles.secondPhone}`}
@@ -47,14 +64,19 @@ export default function Description() {
           <img className={`${styles.itemImage}`} src={PhoneBig} alt="phone-big" />
           <div className={styles.firstParagraph}>
             <img
-              className={`${styles.arrow} ${styles.thirdArrow}`}
+              className={`${styles.itemArrow} ${styles.thirdArrow}`}
               src={arrowOne}
               alt="arrow-one"
             />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
-              amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
-            </p>
+            <div className={` ${styles.itemText} ${styles.thirdParagraph}`}>
+              <p className={styles.itemTextTitle}>
+                3 Lorem ipsum <br /> dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
+                amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
+              </p>
+            </div>
           </div>
         </article>
         {/* 4 */}
@@ -66,14 +88,19 @@ export default function Description() {
           />
           <div>
             <img
-              className={`${styles.arrow} ${styles.fourthArrow}`}
+              className={`${styles.itemArrow} ${styles.fourthArrow}`}
               src={arrowTwo}
               alt="arrow-two"
             />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
-              amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
-            </p>
+            <div className={` ${styles.itemText} ${styles.fouthParagraph}`}>
+              <p className={styles.itemTextTitle}>
+                4 Lorem ipsum <br /> dolor sit amet.
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus enim
+                amet fugiat nostrum ipsum ab deleniti esse quibusdam? Eveniet, alias?
+              </p>
+            </div>
           </div>
         </article>
       </section>

@@ -1,22 +1,24 @@
+@import '../const.scss';
+
 .description {
   z-index: 1;
   width: 100%;
   background-color: white;
-  margin-top: -150px;
+  margin-top: -120px;
   border-radius: 50% 50% 0 0 / 12% 12% 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .descriptionArrowsBtn {
-    margin-top: -22.5px;
+    margin-top: -20px;
     border: none;
     outline: none;
     border-radius: 5px;
     background-color: #ff4e00;
     background-image: linear-gradient(360deg, #ff4e00 0%, #ec9f05 74%);
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +38,19 @@
     }
   }
 
+  .descriptionTitle {
+    margin-top: 150px;
+    font-size: 2rem;
+
+    @media (max-width: $desktop-small) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.1rem;
+    }
+  }
+
   .descriptionContainer {
     display: flex;
     flex-direction: row;
@@ -52,7 +67,7 @@
       margin-bottom: 10vh;
 
       .itemImage {
-        width: 50%;
+        width: 45%;
         height: auto;
       }
 
@@ -64,11 +79,11 @@
       }
 
       .fourthPhone {
-        margin-bottom: -50vh;
+        margin-bottom: -70vh;
         transform: rotate(-70deg);
       }
 
-      .arrow {
+      .itemArrow {
         width: 40%;
       }
 
@@ -83,8 +98,100 @@
         margin-left: -20vw;
       }
 
+      .itemText {
+        z-index: 200;
+
+        .itemTextTitle {
+          font-family: 'Love', sans-serif;
+          color: orange;
+          font-size: 1.1rem;
+          width: 90%;
+        }
+
+        .itemTextTitle::first-letter {
+          float: left;
+          font-size: 4rem;
+          line-height: 2rem;
+          padding-top: 0.8rem;
+          padding-right: 8px;
+        }
+      }
+
       .firstParagraph {
         align-self: flex-start;
+      }
+
+      .thirdParagraph {
+        margin-top: -10vh;
+      }
+
+      .fouthParagraph {
+        margin-left: -10vw;
+        width: 100%;
+      }
+
+      @media (max-width: $desktop-small) {
+        .itemImage {
+          width: 30%;
+          height: auto;
+        }
+
+        .fourthPhone {
+          margin-bottom: -40vh;
+        }
+
+        .itemArrow {
+          width: 25%;
+        }
+
+        .itemText {
+          z-index: 200;
+          font-size: 0.7rem;
+
+          .itemTextTitle {
+            font-size: 0.8rem;
+          }
+
+          .itemTextTitle::first-letter {
+            float: left;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+        }
+
+        .secondItem {
+          margin-top: 20vh;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        .itemImage {
+          display: none;
+        }
+
+        .firstParagraph {
+          align-self: center;
+        }
+
+        .thirdParagraph {
+          margin-top: 0;
+        }
+
+        .fouthParagraph {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+
+      .descriptionItem {
+        width: 80%;
+      }
+
+      .itemArrow {
+        display: none;
       }
     }
   }
