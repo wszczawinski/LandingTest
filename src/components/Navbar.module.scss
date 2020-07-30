@@ -68,6 +68,7 @@
       align-items: center;
 
       .navbarLogo {
+        font-size: 1.8rem;
         margin-bottom: 20px;
       }
       
@@ -78,6 +79,9 @@
       }
     }
     @media (max-width: $mobile) {
+      .navbarLogo{
+        font-size: 1.4rem;
+      }
       .navbarList {
         font-size: 0.6rem;
 

@@ -43,7 +43,7 @@ export default function Description() {
               src={arrowOne}
               alt="arrow-one"
             />
-            <div className={` ${styles.itemText}`}>
+            <div className={` ${styles.itemText} ${styles.secondParagraph}`}>
               <p className={styles.itemTextTitle}>
                 2 Lorem ipsum <br /> dolor sit amet.
               </p>
