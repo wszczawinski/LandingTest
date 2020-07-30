@@ -14,11 +14,12 @@ function App() {
     <Router>
       <div className={styles.wrapper}>
         <Navbar />
-
-        <Switch>
-          <Route exact path={ROUTES.HOME} component={Home} />
-          <Route path={ROUTES.REGISTER} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path={ROUTES.HOME} component={Home} />
+            <Route path={ROUTES.REGISTER} />
+          </Switch>
+        </main>
       </div>
     </Router>
   );

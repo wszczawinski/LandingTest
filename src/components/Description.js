@@ -6,7 +6,7 @@ import arrowTwo from '../img/arrow2.png';
 
 export default function Description() {
   let scroll = () => {
-    let scrollDistance = document.documentElement.clientHeight * 0.9;
+    let scrollDistance = document.documentElement.clientHeight;
     window.scrollBy(0, scrollDistance);
   };
 
