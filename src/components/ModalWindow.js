@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styles from './ModalWindow.module.scss';
 
-export default function ModalWindow() {
+export default function ModalWindow({Form}) {
   let history = useHistory();
 
   let back = e => {
@@ -13,7 +13,7 @@ export default function ModalWindow() {
   return (
     <div className={styles.modalBackground} onClick={back}>
       <div className={styles.modal} onClick={e => e.stopPropagation()}>
-        Rejestracja
+        <Form/>
       </div>
     </div>
   );

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 
+//routes
+import * as ROUTES from '../constants/routes';
+
 export default function Navbar() {
   let location = useLocation();
   let [scrollClass, setScrollClass] = useState(false);
@@ -17,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className={` ${styles.navbar} ${scrollClass ? styles.transparent : null} `}>
       <div className={styles.navbarContainer}>
-        <Link to="/" className={styles.navbarLogo}>
+        <Link to={ROUTES.HOME} className={styles.navbarLogo}>
           Logo
         </Link>
         <ul className={styles.navbarList}>
@@ -30,11 +33,20 @@ export default function Navbar() {
           <li>
             <a href="#pricing">Cennik</a>
           </li>
-          <li>Logowanie</li>
           <li>
             <Link
               to={{
-                pathname: '/#register',
+                pathname: ROUTES.LOGIN,
+                state: { background: location },
+              }}
+            >
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={{
+                pathname: ROUTES.REGISTER,
                 state: { background: location },
               }}
             >
