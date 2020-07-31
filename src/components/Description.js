@@ -11,7 +11,7 @@ export default function Description() {
   };
 
   return (
-    <section className={styles.description}>
+    <section className={styles.description} id="description">
       <button onClick={() => scroll()} className={styles.descriptionArrowsBtn}>
         <span></span>
         <span></span>

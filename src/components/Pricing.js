@@ -4,7 +4,7 @@ import phoneSmall from '../img/phone_small.png';
 
 export default function Pricing() {
   return (
-    <section className={styles.pricing}>
+    <section className={styles.pricing} id="pricing">
       <div className={styles.pricingContent}>
         <h2 className={styles.pricingTitle}>
           Cennik <span>ile to kosztuje?</span>

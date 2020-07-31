@@ -4,7 +4,7 @@ import phoneHand from '../img/phone_hand.png';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="hero">
       <div className={styles.heroContainer}>
         <article className={styles.heroArticle}>
           <h2>Poznaj Lorem Ipsum!</h2>

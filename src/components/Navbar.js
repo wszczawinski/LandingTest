@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
+  let location = useLocation();
   let [scrollClass, setScrollClass] = useState(false);
 
   window.addEventListener('scroll', () => {
@@ -20,11 +21,26 @@ export default function Navbar() {
           Logo
         </Link>
         <ul className={styles.navbarList}>
-          <li>Start</li>
-          <li>Jak to działa?</li>
-          <li>Cennik</li>
+          <li>
+            <a href="#hero">Start</a>
+          </li>
+          <li>
+            <a href="#description">Jak to działa?</a>
+          </li>
+          <li>
+            <a href="#pricing">Cennik</a>
+          </li>
           <li>Logowanie</li>
-          <li>Rejestracja</li>
+          <li>
+            <Link
+              to={{
+                pathname: '/#register',
+                state: { background: location },
+              }}
+            >
+              Rejestracja
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

@@ -41,6 +41,11 @@
         display: block;
         height: auto;
         cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
       }
 
       li:hover {
@@ -82,6 +87,7 @@
       .navbarLogo {
         font-size: 1.4rem;
       }
+
       .navbarList {
         font-size: 0.6rem;
 
