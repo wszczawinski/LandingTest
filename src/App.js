@@ -4,9 +4,9 @@ import styles from './App.module.scss';
 
 //components
 import Navbar from './components/Navbar';
-import ModalWindow from './components/ModalWindow';
-import Register from './components/Register';
-import Login from './components/Login';
+import ModalWindow from './components/modal/ModalWindow';
+import Register from './components/modal/Register';
+import Login from './components/modal/Login';
 
 //screens
 import Home from './screens/Home';
