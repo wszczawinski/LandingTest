@@ -40,7 +40,7 @@ export default function Navbar() {
                 state: { background: location },
               }}
             >
-              Login
+              Logowanie
             </Link>
           </li>
           <li>
