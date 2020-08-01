@@ -139,6 +139,7 @@
               select {
                 width: 80%;
                 align-self: center;
+                text-align: center;
               }
 
               h2 {
@@ -175,6 +176,47 @@
 
                 p {
                   font-size: 0.9rem;
+                }
+              }
+            }
+          }
+          @media (max-width: $tablet) {
+            .planPricesPaid {
+              .planPricesElement {
+                width: 20%;
+
+                h2 {
+                  font-size: 0.8rem;
+
+                  span {
+                    font-size: 0.4rem;
+                  }
+                }
+
+                select {
+                  font-size: 0.7rem;
+                  width: 95%;
+                }
+
+                p {
+                  font-size: 0.7rem;
+                }
+              }
+            }
+          }
+          @media (max-width: $mobile) {
+            .planPricesPaid {
+              .planPricesElement {
+                h2 {
+                  font-size: 0.6rem;
+
+                  span {
+                    font-size: 0.3rem;
+                  }
+                }
+
+                p {
+                  font-size: 0.6rem;
                 }
               }
             }
