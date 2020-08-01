@@ -35,6 +35,10 @@
       border-right: 2px solid #fff;
       transform: rotate(45deg);
     }
+
+    @media (max-width: $tablet) {
+      margin-top: -17.5vh;
+    }
   }
 
   .descriptionTitle {
@@ -235,4 +239,9 @@
   background: white;
   width: 100%;
   height: 10vh;
+
+  @media (max-width: $tablet) {
+    top: 85vh;
+    height: 15vh;
+  }
 }
