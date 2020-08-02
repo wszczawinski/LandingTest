@@ -32,8 +32,8 @@ function RouteSwitch() {
       <main>
         <Switch location={background || location}>
           <Route exact path={ROUTES.HOME} component={Home} />
-          <Route path={ROUTES.REGISTER} component={ModalWindow} />
-          <Route path={ROUTES.LOGIN} component={ModalWindow} />
+          <Route path={ROUTES.REGISTER} children={<ModalWindow Form={Register} />} />
+          <Route path={ROUTES.LOGIN} children={<ModalWindow Form={Login} />} />
         </Switch>
         {background && (
           <Route path={ROUTES.REGISTER} children={<ModalWindow Form={Register} />} />
